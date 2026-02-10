@@ -2,10 +2,13 @@ import { Helmet } from 'react-helmet-async';
 import { Layout } from '@/components/layout/Layout';
 import { 
   HeroSection, 
-  ProblemSection, 
-  DifferenceSection, 
-  OutcomesSection, 
-  TrustSection, 
+  OpeningSection,
+  WhyBloomingtonSection,
+  JuniorCTOMethodologySection,
+  NationwideSection,
+  TechStackSection,
+  RealResultsSection,
+  StrategyCallSection,
   CTASection 
 } from '@/components/sections/HomeSections';
 
@@ -13,33 +16,45 @@ const homeSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "Rite Tutor",
+  "description": "Premium one-to-one online coding education for kids ages 6-15",
   "url": "https://www.ritetutor.com",
-  "description": "One-to-one online coding and logical thinking tutoring for children aged 6-15.",
+  "logo": "https://www.ritetutor.com/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bloomington",
+    "addressRegion": "IN",
+    "addressCountry": "US"
+  },
   "areaServed": [
-    { "@type": "City", "name": "Bloomington", "addressRegion": "IN" },
-    { "@type": "City", "name": "Ellettsville", "addressRegion": "IN" },
-    { "@type": "City", "name": "Bedford", "addressRegion": "IN" },
-    { "@type": "City", "name": "Martinsville", "addressRegion": "IN" }
+    { "@type": "City", "name": "Bloomington, Indiana" },
+    { "@type": "City", "name": "Bedford, Indiana" },
+    { "@type": "City", "name": "Ellettsville, Indiana" },
+    { "@type": "City", "name": "Nashville, Indiana" },
+    { "@type": "City", "name": "Martinsville, Indiana" },
+    { "@type": "Country", "name": "United States" }
   ],
-  "knowsAbout": ["Coding for Kids", "Computer Science", "Logical Thinking", "STEM Education"]
+  "serviceType": "Online Coding Education",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student",
+    "audienceType": "Children ages 6-15"
+  }
 };
 
 const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Online Coding Classes for Kids Bloomington, IN | 1-on-1 Logic & STEM</title>
-        <meta name="description" content="Rite Tutor offers premium one-to-one online coding tutoring for kids in Bloomington, Ellettsville, and Bedford. We build logical thinkers and Junior CTOs." />
-        <meta name="keywords" content="coding classes for kids Bloomington IN, online coding tutor, one-to-one tutoring" />
+        <title>Online Coding Classes for Kids | Bloomington, IN & Nationwide | Rite Tutor</title>
+        <meta name="description" content="Premium one-to-one online coding tutoring for kids ages 6-15. We don't just teach syntax—we build Junior CTOs with deep logical thinking. Serving Bloomington, Bedford, Ellettsville & students nationwide. Book your free strategy call today." />
+        <meta name="keywords" content="online coding classes for kids, coding classes Bloomington IN, one-to-one coding tutor, STEM education for kids, programming tutoring for children" />
         <link rel="canonical" href="https://www.ritetutor.com/" />
         
-        {/* Open Graph */}
-        <meta property="og:title" content="Online Coding Classes for Kids Bloomington, IN | 1-on-1 Logic & STEM" />
-        <meta property="og:description" content="Rite Tutor offers premium one-to-one online coding tutoring for kids in Bloomington, Ellettsville, and Bedford. We build logical thinkers and Junior CTOs." />
+        <meta property="og:title" content="Online Coding Classes for Kids | Bloomington, IN & Nationwide | Rite Tutor" />
+        <meta property="og:description" content="Premium one-to-one online coding tutoring for kids ages 6-15. We don't just teach syntax—we build Junior CTOs with deep logical thinking." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ritetutor.com/" />
         
-        {/* Schema */}
         <script type="application/ld+json">
           {JSON.stringify(homeSchema)}
         </script>
@@ -47,10 +62,13 @@ const Index = () => {
       
       <Layout>
         <HeroSection />
-        <ProblemSection />
-        <DifferenceSection />
-        <OutcomesSection />
-        <TrustSection />
+        <OpeningSection />
+        <WhyBloomingtonSection />
+        <JuniorCTOMethodologySection />
+        <NationwideSection />
+        <TechStackSection />
+        <RealResultsSection />
+        <StrategyCallSection />
         <CTASection />
       </Layout>
     </>

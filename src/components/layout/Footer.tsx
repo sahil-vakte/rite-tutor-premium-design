@@ -5,14 +5,14 @@ import logo from '@/assets/logo.png';
 const footerLinks = {
   programs: [
     { name: 'Learning Pathways', href: '/learning-pathways' },
+    { name: 'Services', href: '/services' },
     { name: 'Projects & Impact', href: '/projects' },
     { name: 'How It Works', href: '/how-it-works' },
-    { name: 'Pricing', href: '/pricing' },
   ],
   company: [
     { name: 'About Us', href: '/about-us' },
-    { name: 'Why Rite Tutor?', href: '/why-rite-tutor' },
-    { name: 'For Parents', href: '/for-parents' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ],
   resources: [
