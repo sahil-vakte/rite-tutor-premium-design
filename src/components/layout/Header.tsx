@@ -10,10 +10,9 @@ const navigation = [
   { name: 'About Us', href: '/about-us' },
   { name: 'How It Works', href: '/how-it-works' },
   { name: 'Learning Pathways', href: '/learning-pathways' },
+  { name: 'Services', href: '/services' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Why Rite Tutor?', href: '/why-rite-tutor' },
   { name: 'Pricing', href: '/pricing' },
-  { name: 'For Parents', href: '/for-parents' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];

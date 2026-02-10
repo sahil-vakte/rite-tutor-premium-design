@@ -9,9 +9,8 @@ import AboutUs from "./pages/AboutUs";
 import HowItWorks from "./pages/HowItWorks";
 import LearningPathways from "./pages/LearningPathways";
 import Projects from "./pages/Projects";
-import WhyRiteTutor from "./pages/WhyRiteTutor";
 import Pricing from "./pages/Pricing";
-import ForParents from "./pages/ForParents";
+import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -31,9 +30,8 @@ const App = () => (
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/learning-pathways" element={<LearningPathways />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/why-rite-tutor" element={<WhyRiteTutor />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/for-parents" element={<ForParents />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
