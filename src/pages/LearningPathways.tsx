@@ -3,108 +3,99 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Rocket, Code, Trophy, CheckCircle, Layers, Brain, Globe } from 'lucide-react';
+import { ArrowRight, Rocket, Code, Trophy, CheckCircle, Brain, Globe } from 'lucide-react';
 
 const pathwaysSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "itemListElement": [
-    { "@type": "Course", "position": 1, "name": "Logic Explorers (Ages 6-8)", "description": "Foundational thinking and pattern recognition." },
-    { "@type": "Course", "position": 2, "name": "Digital Builders (Ages 9-11)", "description": "Syntax introduction and debugging resilience." },
-    { "@type": "Course", "position": 3, "name": "Full-Stack Innovators (Ages 12-13)", "description": "Web development and database management." },
-    { "@type": "Course", "position": 4, "name": "Junior CTOs (Ages 14-15)", "description": "Professional development and university certifications." }
+    { "@type": "Course", "position": 1, "name": "Logic Explorers (Foundations)", "description": "Visual logic development, computational thinking, and first coding concepts." },
+    { "@type": "Course", "position": 2, "name": "Digital Builders (Intermediate)", "description": "Text-based programming, debugging resilience, and project-based learning." },
+    { "@type": "Course", "position": 3, "name": "Junior CTOs (Advanced)", "description": "University-level coursework, professional certifications, and advanced project development." }
   ]
-};
-
-const courseSchema = {
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "One-to-One Coding Mentorship Program",
-  "description": "Personalized coding education from visual logic to professional development",
-  "provider": { "@type": "EducationalOrganization", "name": "Rite Tutor" },
-  "educationalLevel": "Beginner to Advanced",
-  "teaches": ["Python Programming", "Web Development", "Logical Thinking", "Problem Solving"],
-  "availableLanguage": "en",
-  "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT1H" }
 };
 
 const pathways = [
   {
     icon: Rocket,
-    title: "Stage 1: The Logic Explorers",
-    subtitle: "Foundational Thinking",
-    ages: "Typical Age Range: 6-8 years (skill-dependent)",
-    description: "Young students don't need complex programming syntax—they need to understand that problems can be broken into manageable pieces, that order matters in sequential processes, and that pattern recognition is a learnable skill.",
-    focusAreas: [
-      "Sequencing & Order: Understanding that rearranging steps changes outcomes",
-      "Pattern Recognition: Identifying repeating structures in visual and numerical sequences",
-      "Decomposition Basics: Breaking large challenges into smaller, manageable tasks",
-      "Cause & Effect: Understanding that actions produce predictable results"
+    title: "Pathway 1: Logic Explorers",
+    subtitle: "Foundations",
+    ages: "Typically ages 6-10 (skill-dependent—not age-restricted)",
+    description: "This pathway is perfect for children who show curiosity about how technology works, enjoy puzzles and pattern recognition games, and ask \"why\" questions constantly.",
+    phases: [
+      { name: "Phase 1: Visual Logic Development", description: "Before touching code, students master how to think algorithmically through interactive visual platforms. They build proportional reasoning, pattern recognition, and problem decomposition skills. Think of this as learning musical scales before attempting compositions." },
+      { name: "Phase 2: Introduction to Computational Thinking", description: "Students learn to break complex problems into manageable steps, identify patterns across different scenarios, and develop solutions that can be applied repeatedly. These are practical thinking tools students will use for life." },
+      { name: "Phase 3: First Coding Concepts", description: "Using project-based learning, students create simple interactive applications. They're not following tutorials—they're building original projects that solve real problems they've identified." }
     ],
-    tools: ["Brilliant.org visual logic puzzles", "Block-based coding environments (Scratch-style interfaces)", "Interactive storytelling that introduces if/then logic"],
-    milestone: "Students can explain their thinking process when solving unfamiliar problems, demonstrating foundational algorithmic reasoning without necessarily writing traditional code.",
+    outcomes: [
+      "Approach unfamiliar problems systematically rather than randomly",
+      "Explain their thinking process clearly to others",
+      "Debug simple programs independently",
+      "Build basic web applications using HTML and CSS",
+      "Demonstrate genuine enthusiasm for creating rather than consuming technology"
+    ],
+    duration: "Typically 6-12 months",
     color: "from-blue-500 to-cyan-500"
   },
   {
     icon: Code,
-    title: "Stage 2: The Digital Builders",
-    subtitle: "Syntax Introduction",
-    ages: "Typical Age Range: 9-11 years (skill-dependent)",
-    description: "This transitional stage moves from visual block-based programming to text-based languages. It's where many students either develop confidence or learned helplessness, depending on instruction quality.",
-    focusAreas: [
-      "Text-Based Syntax: Introduction to HTML, CSS, and basic JavaScript",
-      "Debugging Resilience: Treating errors as puzzles rather than failures",
-      "Version Control: Basic Git concepts and saving work progression",
-      "Project Planning: Outlining what you'll build before writing code"
+    title: "Pathway 2: Digital Builders",
+    subtitle: "Intermediate",
+    ages: "Typically ages 9-13 (skill-dependent)",
+    description: "This transitional stage is where students build real applications, develop debugging resilience, and begin creating professional portfolios. It's where many students either develop confidence or learned helplessness, depending on instruction quality.",
+    phases: [
+      { name: "Advanced Web Development", description: "Students master HTML5, CSS3, and JavaScript, building responsive websites and interactive applications. They learn to orchestrate multiple technologies simultaneously." },
+      { name: "Version Control & Portfolio", description: "Professional portfolio development begins in earnest. Students maintain version control repositories, document their projects, and build a visible record of growth." },
+      { name: "Project-Based Mastery", description: "Students build increasingly sophisticated applications—from personal websites to community tools, sports analyzers to environmental trackers—based on their interests." }
     ],
-    tools: ["VS Code with guided environments", "Brilliant.org intermediate courses", "IXL integration for math reinforcement", "GitHub basics"],
-    milestone: "Students independently build simple interactive websites and can debug common errors without mentor guidance.",
+    outcomes: [
+      "Build responsive, interactive web applications independently",
+      "Use version control professionally for all projects",
+      "Debug complex multi-file programs systematically",
+      "Explain technical concepts to non-technical audiences",
+      "Maintain a growing portfolio of 10-20 documented projects"
+    ],
+    duration: "Typically 12-18 months",
     color: "from-purple-500 to-pink-500"
   },
   {
-    icon: Layers,
-    title: "Stage 3: The Full-Stack Innovators",
-    subtitle: "Applied Development",
-    ages: "Typical Age Range: 12-13 years (skill-dependent)",
-    description: "Students transition from building simple projects to creating sophisticated applications with multiple interconnected systems.",
-    focusAreas: [
-      "Advanced JavaScript: Functions, objects, arrays, and DOM manipulation",
-      "React.js: Component-based architecture and modern front-end development",
-      "Database Basics: Understanding data storage and retrieval",
-      "API Integration: Connecting applications to external services"
-    ],
-    tools: ["Professional development environments", "React.js framework", "Database platforms", "API testing tools"],
-    milestone: "Students build full-stack web applications with user interfaces, data management, and deployed live projects.",
-    color: "from-orange-500 to-red-500"
-  },
-  {
     icon: Trophy,
-    title: "Stage 4: The Junior CTOs",
-    subtitle: "Professional Mastery",
-    ages: "Typical Age Range: 14-15 years (skill-dependent)",
-    description: "The pinnacle of our pathway. Students don't just code—they architect solutions, manage development workflows, and earn professional credentials.",
-    focusAreas: [
-      "Full-Stack MERN Development: MongoDB, Express, React, Node.js",
-      "Mobile App Development: React Native or Flutter",
-      "Advanced Algorithm Design: Data structures, optimization, computational thinking",
-      "Professional Practices: Code review, documentation, team collaboration"
+    title: "Pathway 3: Junior CTOs",
+    subtitle: "Advanced",
+    ages: "Typically ages 12-15 (skill-dependent)",
+    description: "The pinnacle of our pathway. Students don't just code—they architect solutions, manage development workflows, and earn professional credentials that carry real weight in college applications and early career opportunities.",
+    phases: [
+      { name: "University-Level Coursework", description: "Students work toward professional certifications and college credits through strategic integration with top-tier online education platforms. Our advanced students earn verified certificates from legendary university computer science courses." },
+      { name: "Professional Certifications", description: "Beyond university coursework, we prepare students for industry-recognized professional certifications in full-stack development, data science, AI fundamentals, cloud computing, and mobile development." },
+      { name: "Advanced Project Development", description: "Junior CTO students build sophisticated applications that get adopted by organizations, serve real users, demonstrate professional-level architecture, and include comprehensive testing and documentation." }
     ],
-    tools: ["Harvard CS50 course materials", "IBM Professional Certificates", "MIT OpenCourseWare", "College Credit by Examination prep"],
-    milestone: "Students possess professional-level portfolios with sophisticated projects, university-verified certifications, and the capability to contribute meaningfully to real software development teams.",
+    outcomes: [
+      "Earned 1-3 university-level computer science credentials",
+      "Completed 2-5 professional certification programs",
+      "Built 30-50 documented projects in their portfolio",
+      "Developed presentation skills competitive for internships",
+      "Created applications with measurable real-world impact"
+    ],
+    duration: "Typically 18-30 months",
     color: "from-primary to-yellow-500"
   }
+];
+
+const timelines = [
+  { label: "Young Beginners (Ages 6-8, No Experience)", steps: ["6-12 months: Logic Explorers pathway", "12-24 months: Digital Builders pathway", "24-48 months: Junior CTO pathway (if desired)"] },
+  { label: "Mid-Range Starters (Ages 9-11, Some Exposure)", steps: ["3-6 months: Accelerated Logic Explorers", "12-18 months: Digital Builders pathway", "18-36 months: Junior CTO pathway"] },
+  { label: "Advanced Beginners (Ages 12-15, Motivated & Ready)", steps: ["3-6 months: Foundations assessment & gap-filling", "6-12 months: Digital Builders pathway", "12-24 months: Junior CTO pathway with university credentials"] }
 ];
 
 const LearningPathways = () => {
   return (
     <>
       <Helmet>
-        <title>Learning Pathways | Structured Growth From Logic to Professional Developer | Rite Tutor</title>
-        <meta name="description" content="Comprehensive computer science pathways that adapt to your child's unique capabilities. From Logic Explorers (ages 6-8) to Junior CTOs (ages 14-15)." />
-        <meta name="keywords" content="coding curriculum for kids, computer science pathway, python for kids, structured coding education" />
+        <title>Learning Pathways | From Logic Explorer to Junior CTO | Rite Tutor</title>
+        <meta name="description" content="Three skill-based pathways that students progress through based on demonstrated mastery, not calendar age. From Logic Explorers to Digital Builders to Junior CTOs." />
+        <meta name="keywords" content="coding curriculum for kids, computer science pathway, skill-based coding education, personalized learning path" />
         <link rel="canonical" href="https://www.ritetutor.com/learning-pathways" />
         <script type="application/ld+json">{JSON.stringify(pathwaysSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(courseSchema)}</script>
       </Helmet>
       
       <Layout>
@@ -114,32 +105,29 @@ const LearningPathways = () => {
           <div className="container-wide">
             <motion.div className="max-w-4xl mx-auto text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                Structured Growth From Logic Explorer to{' '}
-                <span className="text-primary">Professional Developer</span>
+                Your Child's Personalized Journey:{' '}
+                <span className="text-primary">From Logic Explorer to Junior CTO</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                A Comprehensive Computer Science Pathway That Adapts to Your Child's Unique Capabilities
+                Three skill-based pathways that students progress through based on demonstrated mastery, not calendar age.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Why Pathways Matter */}
+        {/* Intro */}
         <section className="py-20 bg-background">
           <div className="container-wide">
             <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                Why Pathways Matter More Than <span className="text-primary">Random Classes</span>
-              </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  Imagine learning a language by randomly jumping between beginner pronunciation, advanced literature, and intermediate grammar with no logical progression. Absurd, right? Yet this describes how most coding education works.
+                  Most coding programs force children into rigid age-based tracks. Seven-year-olds get "beginner" material. Fourteen-year-olds get "advanced" content. Your child's actual capability? Irrelevant.
                 </p>
                 <p>
-                  Parents in Bloomington, Bedford, Ellettsville, and nationwide frantically search for "coding camps near me," enrolling children in disconnected workshops that teach isolated skills without building on previous knowledge. Each experience delivers momentary engagement but no lasting mastery.
+                  Rite Tutor rejects this completely. We've developed three skill-based pathways that students progress through based on demonstrated mastery, not calendar age. A gifted nine-year-old might work in our advanced pathway. A fourteen-year-old who needs foundational support starts where they actually are, not where society expects them to be.
                 </p>
-                <p>
-                  Rite Tutor rejects this chaos entirely. We've designed comprehensive learning pathways that treat computer science education like language acquisition—as a long-term, structured journey requiring consistent practice, cumulative knowledge building, and strategic skill sequencing. Our pathways aren't age-restricted. They're skill-based.
+                <p className="font-semibold text-foreground">
+                  This is education designed around your child—not around administrative convenience.
                 </p>
               </div>
             </motion.div>
@@ -151,14 +139,7 @@ const LearningPathways = () => {
           <div className="container-wide">
             <div className="space-y-16">
               {pathways.map((pathway, index) => (
-                <motion.div
-                  key={pathway.title}
-                  className="bg-background rounded-2xl overflow-hidden shadow-premium"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
+                <motion.div key={pathway.title} className="bg-background rounded-2xl overflow-hidden shadow-premium" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}>
                   <div className={`h-2 bg-gradient-to-r ${pathway.color}`} />
                   <div className="p-8 lg:p-12">
                     <div className="flex items-start gap-4 mb-6">
@@ -176,30 +157,26 @@ const LearningPathways = () => {
                     
                     <div className="grid lg:grid-cols-2 gap-8">
                       <div>
-                        <h4 className="font-bold mb-4 text-lg">Core Focus Areas:</h4>
-                        <ul className="space-y-3">
-                          {pathway.focusAreas.map((area) => (
-                            <li key={area} className="flex items-start gap-2">
-                              <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="text-sm text-muted-foreground">{area}</span>
-                            </li>
+                        <h4 className="font-bold mb-4 text-lg">What Students Learn:</h4>
+                        <div className="space-y-4">
+                          {pathway.phases.map((phase) => (
+                            <div key={phase.name} className="bg-card p-4 rounded-xl border border-border">
+                              <h5 className="font-semibold text-sm mb-1">{phase.name}</h5>
+                              <p className="text-xs text-muted-foreground">{phase.description}</p>
+                            </div>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                       <div>
-                        <h4 className="font-bold mb-4 text-lg">Tools & Platforms:</h4>
-                        <ul className="space-y-3 mb-6">
-                          {pathway.tools.map((tool) => (
-                            <li key={tool} className="flex items-start gap-2">
-                              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                              <span className="text-sm text-muted-foreground">{tool}</span>
+                        <h4 className="font-bold mb-4 text-lg">Expected Outcomes ({pathway.duration}):</h4>
+                        <ul className="space-y-3">
+                          {pathway.outcomes.map((outcome) => (
+                            <li key={outcome} className="flex items-start gap-2">
+                              <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                              <span className="text-sm text-muted-foreground">{outcome}</span>
                             </li>
                           ))}
                         </ul>
-                        <div className="bg-primary/5 p-4 rounded-xl">
-                          <h4 className="font-bold mb-2 text-sm">Milestone Achievement:</h4>
-                          <p className="text-sm text-muted-foreground">{pathway.milestone}</p>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -209,39 +186,74 @@ const LearningPathways = () => {
           </div>
         </section>
 
-        {/* Academic Integration */}
+        {/* Skill-Based Difference */}
         <section className="py-20 bg-background">
           <div className="container-wide">
             <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                Academic Integration:{' '}
-                <span className="text-primary">Strengthening School Performance</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
+                The Skill-Based Difference:{' '}
+                <span className="text-primary">Why This Matters</span>
               </h2>
-              <div className="space-y-6 text-lg text-muted-foreground">
-                <p>
-                  Rite Tutor doesn't compete with traditional education—we enhance it. Through IXL Analytics integration, we identify specific trouble spots in mathematics and language arts, then address those gaps through coding projects that make abstract concepts tangible.
-                </p>
-                <p>
-                  A student struggling with exponents learns through geometric growth in algorithm analysis. Someone confused by proportional reasoning masters it through responsive web design calculations. This integration means parents don't choose between coding education and academic support—Rite Tutor provides both simultaneously.
-                </p>
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-card p-6 rounded-2xl border border-border">
+                  <h3 className="font-bold text-lg mb-3 text-red-500">❌ Gifted Students in Traditional Programs</h3>
+                  <p className="text-sm text-muted-foreground">Become bored and disengaged. When a nine-year-old masters concepts in three weeks but must wait twelve weeks for their age cohort to catch up, we lose their enthusiasm. Repeated boredom trains brilliant children to disengage from learning.</p>
+                </div>
+                <div className="bg-card p-6 rounded-2xl border border-border">
+                  <h3 className="font-bold text-lg mb-3 text-red-500">❌ Struggling Students in Traditional Programs</h3>
+                  <p className="text-sm text-muted-foreground">Develop anxiety and learned helplessness. When a fourteen-year-old gets pushed through advanced material before mastering foundations, they internalize the belief that they're "just not good at coding." The truth is they're perfectly capable—the pacing was wrong.</p>
+                </div>
               </div>
+              <p className="text-lg text-muted-foreground">
+                Rite Tutor's skill-based pathways eliminate both problems. Every student progresses at their optimal pace, building genuine mastery rather than superficial familiarity.
+              </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Flexible Pacing */}
+        {/* Progression Timeline */}
+        <section className="py-20 bg-card">
+          <div className="container-wide">
+            <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center">
+                Progression Timeline:{' '}
+                <span className="text-primary">What to Expect</span>
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {timelines.map((timeline) => (
+                  <div key={timeline.label} className="bg-background p-6 rounded-2xl border border-border">
+                    <h3 className="font-bold text-sm mb-4">{timeline.label}</h3>
+                    <ul className="space-y-2">
+                      {timeline.steps.map((step) => (
+                        <li key={step} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-xs text-muted-foreground">{step}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <p className="text-center text-sm text-muted-foreground mt-6">
+                These timelines assume consistent weekly sessions. Students who pursue more intensive schedules (2-3 sessions weekly) progress faster. Those who need slower pacing extend timelines without stigma or pressure.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Global Accessibility */}
         <section className="py-20 bg-foreground text-background">
           <div className="container-wide">
             <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                Flexible Pacing:{' '}
-                <span className="text-primary">The Anti-Grade Philosophy in Action</span>
+                Global Accessibility:{' '}
+                <span className="text-primary">Learning From Anywhere</span>
               </h2>
               <p className="text-lg text-background/70 mb-6">
-                These pathway stages represent skill progression, not time-based curricula. Students don't "complete" a stage in predetermined weeks—they master concepts before advancing. A gifted learner might progress through multiple stages in a year. Someone building deep foundational strength might spend eighteen months on Stage 2. Both approaches are valid.
+                Whether your family lives in the United States (all 50 states), Canada, United Kingdom, Australia, Singapore, UAE, Germany, France, Netherlands, India, Japan, or anywhere globally—these pathways are accessible. Our online model means students in small towns receive identical quality mentorship as those in major metropolitan areas.
               </p>
               <p className="text-lg text-background/70">
-                What matters is genuine mastery, not superficial completion. When students advance, they do so from positions of confidence and proven capability, not arbitrary scheduling.
+                Even within these structured pathways, we customize extensively. Two students in Digital Builders might be working on completely different projects based on their interests—one builds a sports statistics analyzer, another creates an environmental tracking app, a third develops a music playlist organizer. Same technical skills. Different applications. This is how we maintain engagement while building mastery.
               </p>
             </motion.div>
           </div>
@@ -252,14 +264,14 @@ const LearningPathways = () => {
           <div className="container-wide">
             <motion.div className="max-w-3xl mx-auto text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-primary-foreground">
-                Find Your Child's Pathway
+                Discover Your Child's Pathway
               </h2>
               <p className="text-lg text-primary-foreground/80 mb-8">
-                During your free strategy call, we'll assess your child's current capabilities and design a customized learning pathway considering their interests, learning style, and long-term objectives.
+                During your free strategy call, we'll assess your child's current capabilities, recommend the appropriate starting pathway, and map a realistic progression timeline. No pressure. No hard sell. Just honest conversation about your child's future.
               </p>
               <Button variant="premium" size="xl" asChild>
                 <Link to="/contact" className="group">
-                  Book Your Strategy Call
+                  Book Your Free Strategy Call
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>

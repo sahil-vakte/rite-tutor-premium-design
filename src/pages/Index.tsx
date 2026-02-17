@@ -3,11 +3,13 @@ import { Layout } from '@/components/layout/Layout';
 import { 
   HeroSection, 
   OpeningSection,
-  WhyBloomingtonSection,
+  WhyFamiliesChooseSection,
   JuniorCTOMethodologySection,
-  NationwideSection,
+  GlobalReachSection,
   TechStackSection,
   RealResultsSection,
+  TestimonialsSection,
+  InvestmentSection,
   StrategyCallSection,
   CTASection 
 } from '@/components/sections/HomeSections';
@@ -16,58 +18,75 @@ const homeSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "Rite Tutor",
-  "description": "Premium one-to-one online coding education for kids ages 6-15",
+  "alternateName": "RiteTutor",
+  "description": "Premium one-to-one online coding education for students ages 6-15. Building logical thinkers through personalized mentorship with global reach.",
   "url": "https://www.ritetutor.com",
-  "logo": "https://www.ritetutor.com/logo.png",
+  "logo": "https://www.ritetutor.com/images/logo.png",
+  "image": "https://www.ritetutor.com/images/hero-image.jpg",
+  "email": "hello@ritetutor.com",
+  "telephone": "+1-929-421-8055",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Bloomington",
-    "addressRegion": "IN",
-    "addressCountry": "US"
+    "addressCountry": "United States"
   },
   "areaServed": [
-    { "@type": "City", "name": "Bloomington, Indiana" },
-    { "@type": "City", "name": "Bedford, Indiana" },
-    { "@type": "City", "name": "Ellettsville, Indiana" },
-    { "@type": "City", "name": "Nashville, Indiana" },
-    { "@type": "City", "name": "Martinsville, Indiana" },
-    { "@type": "Country", "name": "United States" }
+    { "@type": "Country", "name": "United States" },
+    { "@type": "Country", "name": "Canada" },
+    { "@type": "Country", "name": "United Kingdom" },
+    { "@type": "Country", "name": "Australia" },
+    { "@type": "Place", "name": "Global" }
   ],
-  "serviceType": "Online Coding Education",
-  "audience": {
-    "@type": "EducationalAudience",
-    "educationalRole": "student",
-    "audienceType": "Children ages 6-15"
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
   }
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Online Coding Tutoring",
+  "provider": { "@type": "EducationalOrganization", "name": "Rite Tutor" },
+  "areaServed": { "@type": "Place", "name": "Worldwide" },
+  "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://www.ritetutor.com", "serviceType": "Online Service" },
+  "audience": { "@type": "EducationalAudience", "audienceType": "Students ages 6-15" }
 };
 
 const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Online Coding Classes for Kids | Bloomington, IN & Nationwide | Rite Tutor</title>
-        <meta name="description" content="Premium one-to-one online coding tutoring for kids ages 6-15. We don't just teach syntax—we build Junior CTOs with deep logical thinking. Serving Bloomington, Bedford, Ellettsville & students nationwide. Book your free strategy call today." />
-        <meta name="keywords" content="online coding classes for kids, coding classes Bloomington IN, one-to-one coding tutor, STEM education for kids, programming tutoring for children" />
+        <title>Online Coding Classes for Kids | One-to-One Mentorship | Rite Tutor</title>
+        <meta name="description" content="Premium one-to-one online coding mentorship for kids ages 6-15. We build Junior CTOs with deep logical thinking—not syntax memorizers. Serving families across the US & worldwide. Book your free strategy call today." />
+        <meta name="keywords" content="online coding classes for kids, one-to-one coding tutor, STEM education for kids, programming tutoring for children, coding mentorship" />
         <link rel="canonical" href="https://www.ritetutor.com/" />
         
-        <meta property="og:title" content="Online Coding Classes for Kids | Bloomington, IN & Nationwide | Rite Tutor" />
-        <meta property="og:description" content="Premium one-to-one online coding tutoring for kids ages 6-15. We don't just teach syntax—we build Junior CTOs with deep logical thinking." />
+        <meta property="og:title" content="Online Coding Classes for Kids | One-to-One Mentorship | Rite Tutor" />
+        <meta property="og:description" content="Premium one-to-one online coding mentorship for kids ages 6-15. We build Junior CTOs with deep logical thinking—not syntax memorizers." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ritetutor.com/" />
         
         <script type="application/ld+json">
           {JSON.stringify(homeSchema)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
       </Helmet>
       
       <Layout>
         <HeroSection />
         <OpeningSection />
-        <WhyBloomingtonSection />
+        <WhyFamiliesChooseSection />
         <JuniorCTOMethodologySection />
-        <NationwideSection />
+        <GlobalReachSection />
         <TechStackSection />
         <RealResultsSection />
+        <TestimonialsSection />
+        <InvestmentSection />
         <StrategyCallSection />
         <CTASection />
       </Layout>

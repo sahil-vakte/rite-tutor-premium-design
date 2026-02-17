@@ -56,13 +56,13 @@ const HowItWorks = () => {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  Most coding programs for kids follow a depressingly predictable pattern: Gather 15-20 children into a virtual classroom, assign everyone the same age-appropriate project, provide minimal individual attention, and hope struggling students somehow keep pace while gifted learners zone out from boredom.
+                  Most coding programs follow a depressingly predictable pattern: Gather 15-20 children into a virtual classroom, assign everyone the same age-appropriate project, provide minimal individual attention, and hope struggling students somehow keep pace while gifted learners zone out from boredom.
                 </p>
                 <p>
-                  The result? Children learn to copy code they don't understand, memorize syntax without grasping underlying logic, and develop the dangerous belief that programming is either impossibly confusing or trivially simple.
+                  The result? Children learn to copy code they don't understand, memorize syntax without grasping underlying logic, and develop the dangerous belief that programming is either impossibly confusing or trivially simple—depending on whether they fall behind or race ahead of the group average.
                 </p>
                 <p>
-                  Rite Tutor operates from a fundamentally different model. We reject the factory approach entirely. Every student receives 100% of their mentor's attention, every single session. No competing for teacher time. No waiting for slower peers to catch up. Just pure, focused mentorship calibrated to your child's exact skill level and learning pace.
+                  Rite Tutor operates from a fundamentally different model. We reject the factory approach entirely. Every student receives 100% of their mentor's attention, every single session. No competing for teacher time. No waiting for slower peers to catch up or feeling pressured to move faster than comprehension allows. Just pure, focused mentorship calibrated to your child's exact skill level and learning pace.
                 </p>
               </div>
             </motion.div>
@@ -80,9 +80,7 @@ const HowItWorks = () => {
                   </div>
                   <span className="text-5xl font-display font-bold text-primary/20">01</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                  The Logic-First Assessment
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">The Logic-First Assessment</h2>
                 <div className="space-y-4 text-lg text-muted-foreground">
                   <p>
                     We don't start with "What grade are you in?" or "Have you coded before?" Those questions assume age correlates with ability and that prior exposure equals mastery. Both assumptions are demonstrably false.
@@ -90,8 +88,12 @@ const HowItWorks = () => {
                   <p>
                     Instead, our initial assessment focuses on how your child thinks. Through carefully designed logic puzzles, pattern recognition challenges, and problem decomposition exercises, we identify their current reasoning capabilities. A fourth-grader might demonstrate tenth-grade analytical thinking. A high schooler might need foundational work in algorithmic approaches.
                   </p>
+                  <h3 className="text-xl font-bold text-foreground">What Makes Our Assessment Different</h3>
                   <p>
-                    This assessment is friendly, low-pressure, and actually enjoyable. We're not testing your child—we're understanding them.
+                    This assessment is friendly, low-pressure, and actually enjoyable. We're not testing your child—we're understanding them. How do they approach unfamiliar problems? Do they jump straight to solutions or plan systematically? Can they explain their thinking process?
+                  </p>
+                  <p>
+                    For families anywhere in the world, this means no standardized placement tests that reduce your unique child to a generic skill bracket. The assessment happens online, on your schedule, with immediate feedback and personalized pathway recommendations.
                   </p>
                 </div>
                 <div className="mt-6">
@@ -123,19 +125,20 @@ const HowItWorks = () => {
                   </div>
                   <span className="text-5xl font-display font-bold text-primary/20">02</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                  Perfect Mentor Matching
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Perfect Mentor Matching</h2>
                 <div className="space-y-4 text-lg text-muted-foreground">
                   <p>
-                    Technical expertise alone doesn't create effective teaching. A mentor might be a brilliant developer but struggle to explain concepts to children.
+                    Technical expertise alone doesn't create effective teaching. A mentor might be a brilliant developer but struggle to explain concepts to children. Another might excel at working with introverted analytical thinkers but clash with enthusiastic extroverts.
                   </p>
-                  <p>
-                    That's why Rite Tutor invests significant effort in mentor-student matching. We consider learning style (visual vs. verbal, big-picture vs. detail-oriented), personality compatibility, communication preferences, and specific educational objectives. The goal is creating a mentorship relationship where your child feels safe asking questions, comfortable admitting confusion, and excited to tackle challenging material.
-                  </p>
-                  <p>
-                    In one-to-one online tutoring, the relationship is everything. We get this right from the start because switching mentors mid-journey disrupts momentum and trust.
-                  </p>
+                  <p>That's why Rite Tutor invests significant effort in mentor-student matching. We consider:</p>
+                  <ul className="space-y-2 ml-4">
+                    <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /> Learning style (visual vs. verbal, big-picture vs. detail-oriented)</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /> Personality compatibility</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /> Communication preferences</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /> Specific educational objectives</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /> Scheduling needs across time zones</li>
+                  </ul>
+                  <p>The goal is creating a mentorship relationship where your child feels safe asking questions, comfortable admitting confusion, and excited to tackle challenging material.</p>
                 </div>
               </motion.div>
               <motion.div className="lg:order-1" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -155,33 +158,28 @@ const HowItWorks = () => {
                 </div>
                 <span className="text-5xl font-display font-bold text-primary/20">03</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                The Three-Pillar Learning Framework
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">The Three-Pillar Learning Framework</h2>
             </motion.div>
-            
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <motion.div className="bg-background p-8 rounded-2xl shadow-lg border border-border" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                 <Brain className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Pillar 1: Logic (The Why)</h3>
                 <p className="text-muted-foreground">
-                  Before writing a single line of Python or JavaScript, students must understand how to think algorithmically. We use Brilliant.org's visual, interactive lessons to build proportional reasoning, pattern recognition, and systematic problem decomposition. Logic comes first. Always.
+                  Before writing a single line of code, students must understand how to think algorithmically. We use visual, interactive platforms to build proportional reasoning, pattern recognition, and systematic problem decomposition. These aren't abstract exercises—they're the foundational thinking skills that make advanced programming intuitive rather than mystifying. Logic comes first. Always.
                 </p>
               </motion.div>
-              
               <motion.div className="bg-background p-8 rounded-2xl shadow-lg border border-border" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
                 <Code className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Pillar 2: Syntax (The How)</h3>
                 <p className="text-muted-foreground">
-                  Rite Tutor teaches integrated coding from day one. Students learn HTML structure, CSS styling, and JavaScript functionality simultaneously through project-based builds. They don't memorize disconnected syntax—they orchestrate multiple technologies to create real web applications.
+                  Rite Tutor teaches integrated coding from day one. Students learn HTML structure, CSS styling, and JavaScript functionality simultaneously through project-based builds. They don't memorize disconnected syntax—they orchestrate multiple technologies to create real web applications. This mirrors how professional developers actually work.
                 </p>
               </motion.div>
-              
               <motion.div className="bg-background p-8 rounded-2xl shadow-lg border border-border" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
                 <Briefcase className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Pillar 3: Product (The What)</h3>
                 <p className="text-muted-foreground">
-                  Generic coding exercises teach syntax. Real projects teach thinking. Every Rite Tutor student builds a portfolio of functional applications—not tutorials they copied, but original creations that solve genuine problems in their communities.
+                  Generic coding exercises teach syntax. Real projects teach thinking. Every Rite Tutor student builds a portfolio of functional applications—not tutorials they copied, but original creations that solve genuine problems. Every project gets published to professional version control, creating a documented history of growth.
                 </p>
               </motion.div>
             </div>
@@ -198,19 +196,18 @@ const HowItWorks = () => {
                 </div>
                 <span className="text-5xl font-display font-bold text-primary/20">04</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                The Junior CTO Portfolio Development
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Traditional coding classes produce students who've completed courses. Rite Tutor produces students who've built things. There's a massive difference. This portfolio includes:
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">The Junior CTO Portfolio Development</h2>
+              <p className="text-lg text-muted-foreground mb-4">
+                Traditional coding classes produce students who've completed courses. Rite Tutor produces students who've built things. There's a massive difference. As students progress, they develop what we call a "Junior CTO Portfolio"—a collection of increasingly sophisticated projects.
               </p>
+              <h3 className="text-xl font-bold mb-4">What's Included</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
-                  "GitHub repositories with comprehensive documentation",
+                  "Version control repositories with comprehensive documentation",
                   "Live-deployed websites and applications",
-                  "Demo Day videos explaining technical decisions",
+                  "Demo videos explaining technical decisions",
                   "Rite Tutor certifications documenting mastered skills",
-                  "For advanced students: Harvard CS50, IBM, or MIT credentials"
+                  "For advanced students: university credentials and professional certifications"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3 bg-card p-4 rounded-xl border border-border">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -218,10 +215,13 @@ const HowItWorks = () => {
                   </div>
                 ))}
               </div>
+              <p className="text-lg text-muted-foreground mt-6">
+                When college admissions officers review this portfolio alongside generic transcripts from traditional coding classes, the difference is stark. One demonstrates actual capability. The other proves attendance.
+              </p>
               <div className="mt-8">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/projects" className="group">
-                    See Student Success Stories
+                  <Link to="/blog" className="group">
+                    See Student Portfolios
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
@@ -240,14 +240,48 @@ const HowItWorks = () => {
               </h2>
               <div className="space-y-6 text-lg text-background/70">
                 <p>
-                  After every single session, parents receive detailed WhatsApp updates. Not vague summaries—specific breakdowns of what your child learned, where they struggled, breakthroughs they achieved, and what comes next.
+                  After every single session, parents receive detailed updates. Not vague summaries—specific breakdowns of what your child learned, where they struggled, breakthroughs they achieved, and what comes next.
                 </p>
                 <p>
-                  Additionally, you have direct access to every platform we use. Want to review your child's GitHub commit history? It's publicly available. Curious about IXL analytics showing math proficiency levels? Log in anytime. Interested in which Brilliant.org courses they've completed? Check the dashboard.
+                  Additionally, you have direct access to every platform we use. Want to review your child's version control history? It's available. Curious about analytics showing proficiency levels? Log in anytime. Interested in which courses they've completed? Check the dashboard.
                 </p>
                 <p>
-                  For Bloomington families accustomed to driving across town for five-minute parent-teacher conferences that reveal nothing substantive, this level of ongoing communication is revolutionary. You're never wondering whether your investment is yielding results—you know, session by session.
+                  This radical transparency serves multiple purposes: Ensures accountability, helps parents support learning at home, and builds trust through demonstrated results rather than marketing promises.
                 </p>
+                <p>
+                  For families globally, this level of ongoing communication is revolutionary. You're never wondering whether your investment is working—you know, session by session.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Long-Term Pathway */}
+        <section className="py-20 bg-background">
+          <div className="container-wide">
+            <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
+                The Long-Term Pathway:{' '}
+                <span className="text-primary">From Logic Explorer to Tech Professional</span>
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground">
+                <p>
+                  Rite Tutor isn't a short-term skill acquisition program—it's a multi-year educational partnership. Our structured learning pathways accommodate students from age six through fifteen, adapting complexity and pacing to match developmental progression.
+                </p>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-card p-6 rounded-2xl border border-border">
+                    <h4 className="font-bold mb-2">Younger Students (Ages 6-8)</h4>
+                    <p className="text-sm">Focus on play-with-purpose logic development, building pattern recognition and sequential thinking through engaging visual exercises.</p>
+                  </div>
+                  <div className="bg-card p-6 rounded-2xl border border-border">
+                    <h4 className="font-bold mb-2">Mid-Range Students (Ages 9-11)</h4>
+                    <p className="text-sm">Transition from block-based coding concepts to text-based languages, developing debugging resilience and project planning capabilities.</p>
+                  </div>
+                  <div className="bg-card p-6 rounded-2xl border border-border">
+                    <h4 className="font-bold mb-2">Advanced Students (Ages 12-15)</h4>
+                    <p className="text-sm">Pursue professional-level certifications, college credits, and sophisticated full-stack development.</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
